@@ -1,7 +1,10 @@
 package edu.wkd.megacheckin.activity;
 
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,11 +17,13 @@ import edu.wkd.megacheckin.R;
 import edu.wkd.megacheckin.fragment.HomeFragment;
 import edu.wkd.megacheckin.fragment.PictureFragment;
 import edu.wkd.megacheckin.fragment.ProfileFragment;
+import edu.wkd.megacheckin.util.CustomProgressDialog;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
 public class MainActivity extends AppCompatActivity {
     private MeowBottomNavigation bottom_navigation;
+    private CustomProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +34,14 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // Khởi tạo ui
-        initUI();
+        init();
         eventMeowNavagationBottom();
 
         // // open fragment HomeFragment trong app
         openFragment(HomeFragment.newInstance());
     }
 
-    private void initUI() {
+    private void init() {
         bottom_navigation = findViewById(R.id.bottom_navigation);
 
         // Khởi tạo icon, thiết lập màu sắc icon ở file.xml
@@ -46,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
         // open iten 1 trong app
         bottom_navigation.show(1, true);
+
+        dialog = new CustomProgressDialog(MainActivity.this, 0);
     }
 
     private void eventMeowNavagationBottom() {

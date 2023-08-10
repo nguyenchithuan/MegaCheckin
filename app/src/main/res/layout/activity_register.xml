@@ -30,6 +30,7 @@
         />
 
     <EditText
+        android:id="@+id/ed_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
@@ -39,9 +40,11 @@
         android:background="@drawable/bg_ed_login"
         android:padding="14dp"
         android:layout_marginTop="40dp"
+        android:text="thuan0904@gmail.com"
         />
 
     <EditText
+        android:id="@+id/ed_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
@@ -51,9 +54,11 @@
         android:background="@drawable/bg_ed_login"
         android:padding="14dp"
         android:layout_marginTop="10dp"
+        android:text="ChiThuan"
         />
 
     <EditText
+        android:id="@+id/ed_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
@@ -64,9 +69,11 @@
         android:padding="14dp"
         android:layout_marginTop="10dp"
         android:inputType="textPassword"
+        android:text="1234567a"
         />
 
     <EditText
+        android:id="@+id/ed_comfirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Comfirm Password"
@@ -77,9 +84,11 @@
         android:padding="14dp"
         android:layout_marginTop="10dp"
         android:inputType="textPassword"
+        android:text="1234567a"
         />
 
     <Button
+        android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_btn_login"

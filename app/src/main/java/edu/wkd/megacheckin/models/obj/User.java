@@ -11,8 +11,6 @@ public class User {
     private String fullName;
     @SerializedName("user_name")
     private String userName;
-    @SerializedName("password")
-    private String password;
     @SerializedName("device_register")
     private String deviceRegister;
     @SerializedName("ip_register")
@@ -33,7 +31,6 @@ public class User {
                 ", email='" + email + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
                 ", deviceRegister='" + deviceRegister + '\'' +
                 ", ipRegister='" + ipRegister + '\'' +
                 ", linkAvatar='" + linkAvatar + '\'' +
@@ -71,14 +68,6 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getDeviceRegister() {
